@@ -1,0 +1,78 @@
+body {
+    background-image: url(/images/1920.jpg);
+}
+h1 {
+    font-family: Cambria, serif;
+    font-size: 2.6em;
+}
+.aboutme {
+    margin: auto;
+    position: relative;
+    width: 500px;
+    height: 350px;
+    background-color: rgba(138, 138, 138, 0.527);
+    border-radius: 25px;
+    padding: 30px;
+    font-family: Cambria, serif;
+    font-size: 1.5em;   
+    transition: 1s;
+}
+.aboutme.open {
+    width: 1210px;
+}
+.showlabs {
+    margin: auto;
+    position: relative;
+    left: 200px;
+    top: -380px;
+    width: 400px;
+    font-family: Cambria, serif;
+    font-size: 1.5em; 
+    transform: translateX(-100%);
+    animation: ani-right 0.9s forwards;
+}
+@keyframes ani-right {
+    0% {transform: translateX(-100%); visibility: hidden;}
+    20% {transform: translateX(-80%); visibility: hidden;}
+    50% {transform: translateX(-20%); visibility: hidden;  opacity: 0.1;}
+    100% {transform: translateX(0);}
+}
+.labs { 
+    margin: auto;
+    position: relative;
+    left: 200px;
+    top: -380px;
+    width: 400px;
+    font-family: Cambria, serif;
+    font-size: 1.5em; 
+    transform: translateX(-100%);
+    animation: ani-left 0.9s forwards;
+}
+@keyframes ani-left {
+    0% {transform: translateX(0);}
+    20% {transform: translateX(-20%); visibility: hidden;}
+    50% {transform: translateX(-80%); visibility: hidden; opacity: 0.1;}
+    100% {transform: translateX(-100%); visibility: hidden;}
+}
+.bt {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -220px;
+    left: 460px;
+    background-size: 50px, 50px;
+    background-blend-mode: multiply;
+    background-color: rgba(138, 138, 138, 0.540);
+    background-repeat: no-repeat;
+    border: none;
+}
+.right {
+    background-image: url(/images/right.png);
+}
+.left {
+    background-image: url(/images/left.png);
+}
+.nothing {
+    display: none;
+}
