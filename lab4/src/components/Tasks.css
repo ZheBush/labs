@@ -1,0 +1,14 @@
+.task {
+    background-color: rgb(192, 192, 192);
+    width: 200px;
+    height: 100px;
+    border-color: rgb(255, 179, 0);
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}

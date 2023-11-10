@@ -2,7 +2,7 @@ import './Tasks.css';
 
 function Tasks() {
 
-    const task = 'Изучение React';
+    const task = 'Изучить React';
 
     return (
         <div className = 'task'>
