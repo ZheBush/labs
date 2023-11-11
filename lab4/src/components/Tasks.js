@@ -1,17 +1,25 @@
 import './Tasks.css';
-import {Button, useColorMode} from '@chakra-ui/react';
-import React from 'react';
+import {Button} from '@chakra-ui/react';
+import React, { useState } from 'react';
 
 export default function Tasks(props) {
 
-    const [count, setCount] = React.useState(0);
-    const {colorMode, toggleColorMode} = useColorMode()
+    const [todos, setTodos] = useState([])
+    const [text, setText] = useStaet('')
 
     const handleClick = () => {
         document.querySelector('.task').remove()
-        document.querySelector('.ButtonDelete').remove()
-        
+        document.querySelector('.ButtonDelete').remove()   
     };
+
+    const createTask = (text) => {
+        setTodos((prevState) => [...prevState, {id: Date.now(), text}])
+        setText('')
+    }
+
+    const removeTask = (id) => {
+        setTodos((prevState) => prevState.filter((todo) => todo.id !== id))
+    }
 
     return (
         <div>
