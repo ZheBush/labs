@@ -1,15 +1,21 @@
 import Tasks from "./components/Tasks";
-import './index.css'
+import './index.css';
 
-function App() {
+export default function App() {
+
+  const tasks = [
+    {task: 'Изучить React'}, 
+    {task: 'Сделать лабу'}, 
+    {task: 'Защитить лабу'},
+  ];
+
   return (
     <div>
       <h1 class = 'header'>Мои задачи</h1>
-      <Tasks></Tasks>
-      <Tasks></Tasks>
-      <Tasks></Tasks>
+      <Tasks task = {tasks[0].task}/>
+      <Tasks task = {tasks[1].task}/>
+      <Tasks task = {tasks[2].task}/>
     </div>
+
   );
 }
-
-export default App;

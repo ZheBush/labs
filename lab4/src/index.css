@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(95, 95, 95);
+  background-color: rgb(61, 61, 61);
 }
 
 .header {
@@ -9,8 +9,4 @@ body {
   color: rgb(221, 221, 221);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
-}
-
-.back {
-  width: 500px;
 }

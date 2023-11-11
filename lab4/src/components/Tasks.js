@@ -1,14 +1,27 @@
 import './Tasks.css';
+import {Button, useColorMode} from '@chakra-ui/react';
+import React from 'react';
 
-function Tasks() {
+export default function Tasks(props) {
 
-    const task = 'Изучить React';
+    const [count, setCount] = React.useState(0);
+    const {colorMode, toggleColorMode} = useColorMode()
+
+    const handleClick = () => {
+        document.querySelector('.task').remove()
+        document.querySelector('.ButtonDelete').remove()
+        
+    };
 
     return (
-        <div className = 'task'>
-            {task}
-        </div>
+        <div>
+            <div className = 'task'>{props.task}</div>
+            <Button 
+                className = 'ButtonDelete' 
+                onClick = {handleClick}
+            >              
+                Удалить
+            </Button>
+        </div> 
     );
 }
-
-export default Tasks;
