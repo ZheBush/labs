@@ -27,20 +27,19 @@ export const Home = () => {
     return (
         <Flex
             flexDirection="column"
-            h="100vh"
-            w="100vw"
-            m="1rem"
-            gap="1rem"
+            h='100vh'
+            gap="2rem"
             alignItems="center"
+            background='rgb(31 31 31)'
         >
-            <Heading textTransform="uppercase">Todo List</Heading>
+            <Heading h='60px' textTransform="uppercase" color='rgb(220 220 220)'>Todo List</Heading>
             <List
                 h="60vh"
                 w="70vw"
                 display="flex"
                 flexDirection="column"
                 overflowY="scroll"
-                border="2px solid black"
+                border="2px solid orange"
                 borderRadius="md"
                 p="10px"
             >
@@ -56,10 +55,10 @@ export const Home = () => {
                         <Text>{todo.text}</Text>
                         <Button
                             onClick={() => removeTodoHandler(todo.id)}
-                            background="red.500"
-                            color="blue"
+                            background="rgb(255, 160, 0)"
+                            color="rgb(31 31 31)"
                             _hover={{
-                                background: 'red.600',
+                                background: 'orange.200',
                             }}
                         >
                             Удалить
@@ -67,6 +66,7 @@ export const Home = () => {
                     </ListItem>
                 ))}
             </List>
+            
             <chakra.form
                 onSubmit={(e) => {
                     e.preventDefault() // Без перезагрузки приложения после добавления задачи
@@ -79,20 +79,23 @@ export const Home = () => {
             >
                 <Input
                     placeholder="Напишите задачу..."
+                    border='2px solid orange'
                     maxLength={80}
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                     w="300px"
                     h="32px"
+
                 />
                 <Button
                     isDisabled={!text.trim().length}
                     type="submit"
                     w="fit-content"
-                    background="blue.500"
-                    color="white"
+                    background="rgb(255, 160, 0)"
+                    color="rgb(31 31 31)"
                     _hover={{
-                        background: 'blue.600',
+                        background: 'orange.200',
+                        cursor: 'pointer'
                     }}
                 >
                     Добавить задачу
