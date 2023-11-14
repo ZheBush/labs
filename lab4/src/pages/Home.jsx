@@ -57,7 +57,7 @@ export const Home = () => {
                         <Button
                             onClick={() => removeTodoHandler(todo.id)}
                             background="red.500"
-                            color="white"
+                            color="blue"
                             _hover={{
                                 background: 'red.600',
                             }}
