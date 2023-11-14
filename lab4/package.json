@@ -1,41 +1,38 @@
 {
-  "name": "lab4",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@chakra-ui/react": "^2.8.2",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "chakra": "^0.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "ui": "^0.2.4",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "vite-project",
+    "private": false,
+    "license" : "MIT",
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "start": "vite --open",
+        "build": "vite build",
+        "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@chakra-ui/react": "2.5.5",
+        "@emotion/react": "11.10.6",
+        "@emotion/styled": "11.10.6",
+        "framer-motion": "10.12.4",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-router-dom": "6.10.0"
+    },
+    "devDependencies": {
+        "@types/react": "18.0.28",
+        "@types/react-dom": "18.0.11",
+        "@vitejs/plugin-react-swc": "3.0.0",
+        "eslint": "8.39.0",
+        "eslint-config-airbnb": "19.0.4",
+        "eslint-config-prettier": "8.8.0",
+        "eslint-plugin-import": "2.27.5",
+        "eslint-plugin-jsx-a11y": "6.7.1",
+        "eslint-plugin-prettier": "4.2.1",
+        "eslint-plugin-react": "7.32.2",
+        "eslint-plugin-react-hooks": "4.6.0",
+        "eslint-plugin-react-refresh": "0.3.4",
+        "prettier": "2.8.7",
+        "vite": "4.3.0"
+    }
 }

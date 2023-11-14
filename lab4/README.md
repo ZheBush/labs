@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Шаблон для проекта по предмету "Проектный практикум"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Быстрый старт
 
-## Available Scripts
+Для начала работы вам требуется установить любым доступым для вашей ОС образом **LTS версию Node.JS 18+** с [официального сайта](https://nodejs.org/ru) или с помощью утилиты [`nvm`](https://github.com/nvm-sh/nvm)
 
-In the project directory, you can run:
+После установки Node.js вам необходимо установить все необходимые для работы шаблона зависимости с помощью команды `npm install` в терминале находясь в папке проекта
 
-### `npm start`
+Установив зависимости вы можете запустить проект командой `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Библиотеки и модули установленные в шаблоне
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### React
 
-### `npm test`
+Современный фреймворк для разработки веб-приложений, рекомендуем особое внимание при его изучение уделить хукам и функциональным компонентам.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   [Официальная документации (рус.)](https://ru.legacy.reactjs.org/docs/getting-started.html)
+-   [Официальная документации (анг.)](https://react.dev/learn)
+-   [Гайд на Youtube для ознакомления (рус.)](https://youtu.be/OJ16BaPC6VI)
 
-### `npm run build`
+### Chakra UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Библиотека готовых компонентов для создания интерфейсов. С ней можно в считанные минуты создать классный продукт потратив больше времени на логику и меньше на верстку собирая свой проект как из кубиков.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   [Официальный гайд (анг.)](https://chakra-ui.com/getting-started)
+-   [Официальная документации по компонентам (анг.)](https://chakra-ui.com/docs/components)
+-   [Гайд на Youtube по созданию интерфейса WhatsApp (анг.)](https://www.youtube.com/watch?v=lKLH6uMYGVk)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### React Router (react-router-dom)
 
-### `npm run eject`
+Библиотека маршрутизации для React-приложений, которая позволяет управлять навигацией внутри приложения. Она используется для создания динамических маршрутов, переходов между страницами и передачи параметров между компонентами приложения.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   [Официальная документация (анг.)](https://reactrouter.com/en/main)
+-   [Гайд на Youtube (рус.)](https://youtu.be/0auS9DNTmzE)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Eslint
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Линтер кода, который используется для выявления и предотвращения ошибок в коде, а также для поддержания согласованности кода в командных проектах. Он может проверять синтаксис и стилистические аспекты кода, такие как использование переменных, отступы, кавычки и т.д.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-   [Официальная документация (анг.)](https://eslint.org/docs/latest/use/getting-started)
 
-## Learn More
+### Prettier
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Инструмент для автоматического форматирования кода. Он позволяет установить определенный стиль форматирования кода и применить его к всему проекту, без необходимости ручного форматирования. Prettier может форматировать код в соответствии с правилами, определенными в конфигурационном файле, который можно настроить по своему усмотрению.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   [Официальная документация (анг.)](https://prettier.io/docs/en/install.html)
