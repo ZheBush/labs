@@ -9,6 +9,7 @@ import {
     Input,
     Text,
 } from '@chakra-ui/react'
+import './CustomScrollbar.css'
 
 export const Home = () => {
     const [todos, setTodos] = useState([])
@@ -30,18 +31,18 @@ export const Home = () => {
             h='100vh'
             gap="2rem"
             alignItems="center"
-            background='rgb(31 31 31)'
+            background='rgb(50 50 50)'
         >
-            <Heading h='60px' textTransform="uppercase" color='rgb(220 220 220)'>Todo List</Heading>
-            <List
+            <Heading p='30px' h='70px' textTransform="uppercase" color='rgb(220 220 220)'>Мои задачи</Heading>
+            <List className='CustomSrollbar'
                 h="60vh"
                 w="70vw"
                 display="flex"
-                flexDirection="column"
-                overflowY="scroll"
                 border="2px solid orange"
-                borderRadius="md"
+                borderRadius="15px"
                 p="10px"
+                flexDirection="column"
+                overflowY = 'auto'
             >
                 {todos.map((todo) => (
                     <ListItem
@@ -51,6 +52,8 @@ export const Home = () => {
                         alignItems="center"
                         borderBottom="1px solid gray"
                         py="8px"
+                        color='rgb(220 220 220)'
+                        
                     >
                         <Text>{todo.text}</Text>
                         <Button
@@ -75,17 +78,25 @@ export const Home = () => {
                 display="flex"
                 flexDirection="column"
                 alignItems="center"
-                gap="20px"
+                gap="28px"
+                color='rgb(220 220 220)'
             >
                 <Input
-                    placeholder="Напишите задачу..."
                     border='2px solid orange'
+                    borderRadius='7px'
                     maxLength={80}
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                     w="300px"
                     h="32px"
-
+                    placeholder="Напишите задачу:"
+                    _placeholder = {{
+                        color: 'rgb(220 220 220)',
+                    }}
+                    _hover = {{
+                        borderColor: 'orange.200',
+                        cursor: 'pointer'
+                    }}
                 />
                 <Button
                     isDisabled={!text.trim().length}
@@ -93,6 +104,7 @@ export const Home = () => {
                     w="fit-content"
                     background="rgb(255, 160, 0)"
                     color="rgb(31 31 31)"
+                    borderRadius = '8px'
                     _hover={{
                         background: 'orange.200',
                         cursor: 'pointer'

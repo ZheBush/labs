@@ -1,0 +1,13 @@
+.CustomSrollbar::-webkit-scrollbar {
+    width: 15px;
+    border-top-right-radius: 12.5px;
+    border-bottom-right-radius: 12.5px;
+    background-color: rgb(251, 211, 141);
+}
+
+.CustomSrollbar::-webkit-scrollbar-thumb {
+    width: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(255, 160, 0);
+}
