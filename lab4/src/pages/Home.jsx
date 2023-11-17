@@ -18,7 +18,6 @@ export const Home = () => {
     const createTodoHandler = (text) => {
         setTodos((prevState) => [...prevState, { id: Date.now(), text }])
         setText('')
-        // a = [1,2,3] => b = [...[1,2,3], 4,5,6] = [1,2,3,4,5,6]
     }
 
     const removeTodoHandler = (id) => {
@@ -33,10 +32,17 @@ export const Home = () => {
             alignItems="center"
             background='rgb(50 50 50)'
         >
-            <Heading p='30px' h='70px' textTransform="uppercase" color='rgb(220 220 220)'>Мои задачи</Heading>
+            <Heading 
+                p='30px' 
+                h='70px' 
+                textTransform="uppercase" 
+                color='rgb(220 220 220)'
+            >
+                Мои задачи
+            </Heading>
             <List className='CustomSrollbar'
                 h="60vh"
-                w="70vw"
+                w="60vw"
                 display="flex"
                 border="2px solid orange"
                 borderRadius="15px"
@@ -53,7 +59,6 @@ export const Home = () => {
                         borderBottom="1px solid gray"
                         py="8px"
                         color='rgb(220 220 220)'
-                        
                     >
                         <Text>{todo.text}</Text>
                         <Button
@@ -72,41 +77,50 @@ export const Home = () => {
             
             <chakra.form
                 onSubmit={(e) => {
-                    e.preventDefault() // Без перезагрузки приложения после добавления задачи
+                    e.preventDefault()
                     createTodoHandler(text)
                 }}
                 display="flex"
                 flexDirection="column"
                 alignItems="center"
                 gap="28px"
-                color='rgb(220 220 220)'
+                h='13vh'
+                w='25vw'
+                backgroundColor='rgb(255 160 0)'
+                borderRadius='10px'
+                borderColor='rgb(255 160 0)'
+                borderWidth='1px'
             >
                 <Input
+                    variant='unstyled'
+                    placeholder='Напишите задачу:'
+                    color='rgb(220 220 220)'
+                    backgroundColor = 'rgb(50 50 50)'
                     border='2px solid orange'
-                    borderRadius='7px'
                     maxLength={80}
                     value={text}
                     onChange={(e) => setText(e.target.value)}
-                    w="300px"
-                    h="32px"
-                    placeholder="Напишите задачу:"
+                    h="13vh"
                     _placeholder = {{
-                        color: 'rgb(220 220 220)',
+                        color: 'rgba(180 180 180)',
+                        
+                        
                     }}
                     _hover = {{
-                        borderColor: 'orange.200',
-                        cursor: 'pointer'
+                        cursor: 'text'
                     }}
                 />
-                <Button
+                <Button 
                     isDisabled={!text.trim().length}
+                    position='relative'
+                    top='-15px'
                     type="submit"
-                    w="fit-content"
+                    w="20vw"
+                    h='8vh'
                     background="rgb(255, 160, 0)"
-                    color="rgb(31 31 31)"
+                    color="black"
                     borderRadius = '8px'
                     _hover={{
-                        background: 'orange.200',
                         cursor: 'pointer'
                     }}
                 >
