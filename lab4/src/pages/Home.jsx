@@ -21,7 +21,11 @@ export const Home = () => {
     }
 
     const removeTodoHandler = (id) => {
-        setTodos((prevState) => prevState.filter((todo) => todo.id !== id))
+        setTodos((prevState) => prevState.filter((todo) => todo.id != id))
+    }
+
+    const removeAllTodoHandler = () => {
+        setTodos((prevState) => prevState = [])
     }
 
     return (
@@ -34,15 +38,17 @@ export const Home = () => {
         >
             <Heading 
                 p='30px' 
-                h='70px' 
+                h='10vh' 
                 textTransform="uppercase" 
                 color='rgb(220 220 220)'
             >
                 Мои задачи
             </Heading>
             <List className='CustomSrollbar'
+                position='relative'
+                right='10vw'
                 h="60vh"
-                w="60vw"
+                w="55vw"
                 display="flex"
                 border="2px solid orange"
                 borderRadius="15px"
@@ -80,12 +86,15 @@ export const Home = () => {
                     e.preventDefault()
                     createTodoHandler(text)
                 }}
+                position='relative'
+                bottom='59vh'
+                left='26vw'
                 display="flex"
                 flexDirection="column"
                 alignItems="center"
                 gap="28px"
                 h='13vh'
-                w='25vw'
+                w='15vw'
                 backgroundColor='rgb(255 160 0)'
                 borderRadius='10px'
                 borderColor='rgb(255 160 0)'
@@ -103,8 +112,6 @@ export const Home = () => {
                     h="13vh"
                     _placeholder = {{
                         color: 'rgba(180 180 180)',
-                        
-                        
                     }}
                     _hover = {{
                         cursor: 'text'
@@ -115,18 +122,33 @@ export const Home = () => {
                     position='relative'
                     top='-15px'
                     type="submit"
-                    w="20vw"
+                    w='10vw'
                     h='8vh'
                     background="rgb(255, 160, 0)"
                     color="black"
-                    borderRadius = '8px'
+                    borderRadius='8px'
                     _hover={{
-                        cursor: 'pointer'
+                        cursor: 'pointer',
                     }}
                 >
                     Добавить задачу
                 </Button>
             </chakra.form>
+            <Button
+                onClick={() => removeAllTodoHandler(todos)}
+                position='relative'
+                left='26vw'
+                bottom='61vh'
+                h='10vh'
+                w='15vw'
+                backgroundColor='rgb(255 160 0)'
+                _hover={{
+                    cursor: 'pointer',
+                    backgroundColor: 'rgb(251, 211, 141)'
+                }}
+            >
+                Удалить все задачи
+            </Button>   
         </Flex>
     )
 }
